@@ -6,6 +6,8 @@ This project trains a retro-game reinforcement-learning agent with Gymnasium and
 
 ## Setup
 
+Create a local environment file and install the dependencies:
+
 ```bash
 cp .env.example .env
 poetry install
@@ -21,9 +23,10 @@ Use the platform launcher (which also installs dependencies and initializes the 
  
 ## Configuration
 
-The following environment variables in `.env` control the training process:
+Configure your local environment by copying `.env.example` to `.env`. The following variables control the training process:
 
 - `RETRO_ARENA_TIMESTEPS`: Total number of training timesteps.
+- `RETRO_ARENA_NUM_ENVS`: Number of parallel environments for training.
 - `RETRO_ARENA_GAME_ID`: Gymnasium-Retro game ID (e.g., `SuperMarioWorld-Snes-v0`).
 - `RETRO_ARENA_SAVESTATE`: Name of the savestate to start from.
 - `RETRO_ARENA_MODEL_DIR`: Directory for saving models.

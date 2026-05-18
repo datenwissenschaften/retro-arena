@@ -42,7 +42,7 @@ Your new project will include:
 - `pyproject.toml` with Cookiecutter-rendered project metadata
 - `.pre-commit-config.yaml` with formatting and basic quality hooks
 
-Run the generated project from its own directory:
+Run the generated project from its own directory. Create a local environment file and install the dependencies:
 
 ```bash
 cp .env.example .env
