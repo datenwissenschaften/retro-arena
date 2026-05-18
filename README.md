@@ -26,7 +26,7 @@ pipx install cookiecutter
 Generate a new project from this repository:
 
 ```bash
-cookiecutter path/to/retro-arena
+cookiecutter https://github.com/datenwissenschaften/retro-arena
 ```
 
 Cookiecutter will ask for values such as the project name, description, author, license, and Python target. Those answers are rendered into the generated `pyproject.toml`.
@@ -62,7 +62,6 @@ The main prompts are:
 - `description`: project summary
 - `author_name` and `author_email`: rendered into `[project].authors`
 - `license`: SPDX license expression
-- `training_framework_dependency`: dependency that provides `EnvironmentBuilder`, `ModelBuilder`, and `Trainer`
 - `python_requires`: Python version range
 - `python_classifier`: Python classifier version
 - `python_target`: Black/Ruff target such as `py312`
