@@ -13,11 +13,7 @@ poetry install
 
 ## Run
 
-```bash
-python app.py
-```
-
-Or use the platform launcher (which also installs dependencies and initializes the environment):
+Use the platform launcher (which also installs dependencies and initializes the environment):
 
 - Linux/macOS: `./run.sh`
 - Windows Command Prompt: `run.bat`

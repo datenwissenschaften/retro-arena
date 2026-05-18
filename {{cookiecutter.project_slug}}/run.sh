@@ -9,8 +9,13 @@ if command -v poetry >/dev/null 2>&1; then
     exec poetry run python app.py
 fi
 
-if command -v python3 >/dev/null 2>&1; then
-    exec python3 app.py
+if [ -n "$VIRTUAL_ENV" ] || [ -n "$POETRY_ACTIVE" ]; then
+    if command -v python3 >/dev/null 2>&1; then
+        exec python3 app.py
+    fi
+    exec python app.py
 fi
 
-exec python app.py
+echo "Poetry is required to set up the environment."
+echo "Please install it: https://python-poetry.org/docs/#installation"
+exit 1

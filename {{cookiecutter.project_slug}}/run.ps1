@@ -8,10 +8,15 @@ if (Get-Command poetry -ErrorAction SilentlyContinue) {
     exit $LASTEXITCODE
 }
 
-if (Get-Command py -ErrorAction SilentlyContinue) {
-    & py -3 app.py
+if ($env:VIRTUAL_ENV -or $env:POETRY_ACTIVE) {
+    if (Get-Command py -ErrorAction SilentlyContinue) {
+        & py -3 app.py
+        exit $LASTEXITCODE
+    }
+    & python app.py
     exit $LASTEXITCODE
 }
 
-& python app.py
-exit $LASTEXITCODE
+Write-Host "Poetry is required to set up the environment."
+Write-Host "Please install it: https://python-poetry.org/docs/#installation"
+exit 1
