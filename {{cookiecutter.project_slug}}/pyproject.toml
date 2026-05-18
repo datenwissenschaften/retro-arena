@@ -1,0 +1,43 @@
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[project]
+name = "{{ cookiecutter.project_slug }}"
+version = "{{ cookiecutter.version }}"
+description = "{{ cookiecutter.description }}"
+readme = "README.md"
+authors = [
+    { name = "{{ cookiecutter.author_name }}", email = "{{ cookiecutter.author_email }}" }
+]
+license = "{{ cookiecutter.license }}"
+requires-python = "{{ cookiecutter.python_requires }}"
+dependencies = [
+    "datenwissenschaften>=1.0.0",
+]
+classifiers = [
+    "Development Status :: {{ cookiecutter.development_status }}",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: {{ cookiecutter.python_classifier }}",
+]
+
+[dependency-groups]
+dev = [
+    "black>=24.0.0",
+    "ruff>=0.14.13",
+]
+
+[tool.black]
+line-length = 120
+target-version = ['{{ cookiecutter.python_target }}']
+
+[tool.ruff]
+line-length = 120
+target-version = "{{ cookiecutter.python_target }}"
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]
+
+[tool.poetry]
+package-mode = false

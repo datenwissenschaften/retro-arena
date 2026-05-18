@@ -1,0 +1,13 @@
+{
+  "project_name": "Retro Arena",
+  "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '-').replace('_', '-') }}",
+  "version": "0.0.1",
+  "description": "Train retro game agents with Gymnasium and Stable-Baselines3.",
+  "author_name": "author_name",
+  "author_email": "author_email",
+  "license": "GPL-3.0-only",
+  "python_requires": ">=3.12,<3.13",
+  "python_classifier": "3.12",
+  "python_target": "py312",
+  "development_status": "1 - Planning"
+}
