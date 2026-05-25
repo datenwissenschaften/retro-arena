@@ -23,11 +23,11 @@ This project requires game ROMs to function. You must provide your own legally o
 
 ## Run
 
-Use the platform launcher (which also installs dependencies and initializes the environment):
+Start the training run:
 
-- Linux/macOS: `./run.sh`
-- Windows Command Prompt: `run.bat`
-- Windows PowerShell: `.\run.ps1`
+```bash
+poetry run python app.py
+```
  
 ## Configuration
 
@@ -45,7 +45,6 @@ Configure your local environment by copying `.env.example` to `.env`. The follow
 ## Project Layout
 
 - `app.py`: starts the training run
-- `run.sh`, `run.bat`, `run.ps1`: platform launchers
 - `.env.example`: documents the local runtime variables
 - `game/`: Gymnasium wrapper, observation processing, rewards, and termination logic
 - `model/`: PPO model configuration and learning-rate schedule
